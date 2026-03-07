@@ -45,7 +45,7 @@ st.write(f"Articles fetched: {len(articles)}")
 
 results = []
 
-for article in articles[:300]:
+for article in articles[:30]:
 
     text = article["title"] + " " + article["summary"]
 
