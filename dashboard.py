@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-from company_detector import get_trending_companies
 from fetch_news import get_news
 from sentiment_analysis import analyze_sentiment
 
@@ -38,12 +37,6 @@ selected_category = st.selectbox("Choose Sector", categories)
 articles = get_news(selected_category)
 
 st.write(f"Articles fetched: {len(articles)}")
-
-
-# -----------------------------
-# Trending Companies
-# -----------------------------
-
 
 
 # -----------------------------
