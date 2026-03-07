@@ -44,23 +44,6 @@ st.write(f"Articles fetched: {len(articles)}")
 # Trending Companies
 # -----------------------------
 
-st.header("🔥 Trending Companies")
-
-trending = get_trending_companies(articles)
-
-company_names = []
-mention_counts = []
-
-for company, count in trending:
-    company_names.append(company)
-    mention_counts.append(count)
-
-company_df = pd.DataFrame({
-    "Company": company_names,
-    "Mentions": mention_counts
-})
-
-st.bar_chart(company_df.set_index("Company"))
 
 
 # -----------------------------
